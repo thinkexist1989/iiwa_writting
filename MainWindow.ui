@@ -6,47 +6,58 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>647</width>
-    <height>514</height>
+    <width>791</width>
+    <height>603</height>
    </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>微软雅黑 Light</family>
+    <pointsize>10</pointsize>
+   </font>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QGridLayout" name="gridLayout_4" rowstretch="6,1" rowminimumheight="6,1">
+   <layout class="QGridLayout" name="gridLayout_5">
     <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_8">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>选择模式：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QComboBox" name="modeBox">
+        <item>
+         <property name="text">
+          <string>2 Line</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Name</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
      <widget class="QGroupBox" name="groupBox_1">
       <property name="title">
        <string>步骤一：生成字体轨迹</string>
       </property>
-      <layout class="QGridLayout" name="gridLayout_3" columnstretch="1,2">
-       <item row="0" column="1">
-        <widget class="QPushButton" name="stickFontBtn">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="text">
-          <string>启动StickFont</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QPushButton" name="gcodeBtn">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="text">
-          <string>选择G代码</string>
-         </property>
-        </widget>
-       </item>
+      <layout class="QGridLayout" name="gridLayout_3">
        <item row="0" column="0">
         <widget class="QLabel" name="label_6">
          <property name="sizePolicy">
@@ -73,18 +84,109 @@
          </property>
         </widget>
        </item>
-       <item row="2" column="0" colspan="2">
-        <widget class="QPlainTextEdit" name="plainTextEdit"/>
+       <item row="1" column="1" colspan="4">
+        <widget class="QLineEdit" name="rootDir"/>
+       </item>
+       <item row="1" column="5">
+        <widget class="QPushButton" name="selectDir">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>选择目录</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QCheckBox" name="check1">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QPushButton" name="gcode1Btn">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>选择G代码1</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="3">
+        <widget class="QCheckBox" name="check2">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="4" colspan="2">
+        <widget class="QPushButton" name="gcode2Btn">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>选择G代码2</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1" colspan="2">
+        <widget class="QPlainTextEdit" name="text1"/>
+       </item>
+       <item row="3" column="3" colspan="3">
+        <widget class="QPlainTextEdit" name="text2"/>
+       </item>
+       <item row="0" column="1" colspan="5">
+        <widget class="QPushButton" name="stickFontBtn">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>启动StickFont</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>
     </item>
-    <item row="1" column="0">
+    <item row="2" column="0">
      <widget class="QGroupBox" name="groupBox_2">
       <property name="title">
        <string>步骤二：机器人执行</string>
       </property>
       <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="2">
+        <widget class="QPushButton" name="execBtn">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>执行</string>
+         </property>
+        </widget>
+       </item>
        <item row="0" column="0">
         <layout class="QGridLayout" name="gridLayout" columnstretch="1,0,0,0">
          <item row="0" column="0">
@@ -121,6 +223,9 @@
              <verstretch>0</verstretch>
             </sizepolicy>
            </property>
+           <property name="text">
+            <string>30000</string>
+           </property>
           </widget>
          </item>
          <item row="0" column="1">
@@ -131,12 +236,15 @@
              <verstretch>0</verstretch>
             </sizepolicy>
            </property>
+           <property name="text">
+            <string>172.31.1.147</string>
+           </property>
           </widget>
          </item>
         </layout>
        </item>
        <item row="0" column="1">
-        <widget class="QPushButton" name="execBtn">
+        <widget class="QPushButton" name="connectBtn">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
            <horstretch>0</horstretch>
@@ -144,7 +252,7 @@
           </sizepolicy>
          </property>
          <property name="text">
-          <string>执行</string>
+          <string>连接</string>
          </property>
         </widget>
        </item>
@@ -158,8 +266,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>647</width>
-     <height>21</height>
+     <width>791</width>
+     <height>25</height>
     </rect>
    </property>
   </widget>
